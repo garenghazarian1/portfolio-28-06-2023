@@ -1,0 +1,948 @@
+
+/* default values----------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+i{
+    color: aqua;
+}
+:root {
+    width: 100%;
+    height: 100vh;
+    --background: linear-gradient(#6a6e72c5, #000000);
+    --box-shadow: rgba(139, 133, 133, 0.25) 0px 54px 55px, rgba(150, 146, 146, 0.12) 0px -12px 30px, rgba(107, 99, 99, 0.12) 0px 4px 6px, rgba(97, 91, 91, 0.17) 0px 12px 13px, rgba(128, 122, 122, 0.09) 0px -3px 5px;
+}
+
+
+
+
+
+/* body general values------------------------------------ */
+body{
+     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    background-color: #18191b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* got to tpo button------------------------------------------- */
+
+.go-to-top{
+   background-color: #b9b4c09f;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   position: fixed;
+   z-index: 11;
+   bottom: 6rem;
+   right: 6rem;
+    display: flex;
+   justify-content: center;
+   align-items:center;  
+   transition:.6s ease all ; 
+}
+.go-to-top:hover{
+    cursor: pointer;
+    transform : scale(1.2);
+}
+
+
+
+
+
+/* header----------------------------------------------------------  */
+header{
+   width: 90%;
+   max-width: 400px;
+   height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+/* logo-------------- */
+header .line1{
+    margin-top: 1rem;
+    width: 30px;
+    border:2px solid white;
+}
+header .logo{
+    object-fit: cover;
+    min-width: 50px;
+    max-width: 100px;
+    min-height: 50px;
+    max-height: 100px;
+    border: 10px solid #555a5f6b;
+    border-radius: 50%;
+    border-bottom-color :rgb(152, 155, 162);
+    border-left-color :rgb(152, 155, 162);
+    /* box-shadow: 0 0 10px 5px #5d6066; */
+    box-shadow:var(--box-shadow);
+    display: none;
+    animation: rotate 7s infinite linear;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+/* name---------------- */
+header h1{
+    font-size: 4rem;
+    transition: transform 0.5s ;
+}
+header h1:hover {
+    cursor: pointer;
+    transform: scale(1.2) ;
+}
+header h1:active {
+    transform: scale(0.8) ;
+}
+header h1:hover{
+    color: aqua; 
+}
+header h1:hover .fa-circle{
+    color: white; 
+}
+
+/* nav-bar---------------- */
+
+header nav{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    transition: transform 0.2s ; 
+}
+ header nav:hover{
+    transform: scale(1.1) ;
+} 
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+header nav ul li{
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li a i{
+    font-size: 3rem;
+    padding: 2rem;
+}
+header nav ul li a i:hover{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+header nav ul li a i:active{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+
+
+
+/* --------------------main---------------------- */
+/* main profile section */
+main {
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+main .profile-pic{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 1rem;
+    transition: transform 0.2s ; 
+   }
+   main .profile-pic:hover{
+       cursor: pointer;
+       transform: scale(1.1) ;
+   }
+ main .profile-pic .profile-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+} 
+main .profile-pic .profile-img img{
+    padding: 1rem;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(158, 148, 148, 0.17) 0px -23px 25px 0px inset, rgba(83, 82, 82, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 2s ;
+}
+main .profile-pic .profile-img img:hover{
+    cursor: pointer;
+    transform: rotateY(180deg) ;
+}
+main .social-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+main .social-links a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.5s ;
+}
+main .social-links a:hover{
+    cursor: pointer;
+     transform: scale(1.3);
+     box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+main .social-links a:active{
+    transform: scale(0.9);
+    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+main .social-links a i{
+    font-size: 3rem;
+}
+
+
+
+
+
+/* about me ---------------------*/
+main .about-me{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color:#6a6e72c5 ; */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 2rem;
+    transition: transform 0.2s ; 
+  
+}
+main .about-me:hover{
+    cursor: pointer;
+    transform: scale(1.1) ;
+}
+main .about-me h2{
+    font-size: 1.5rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.699);
+    transition: color 0.5s ;
+}
+main .about-me h2:hover{
+    cursor: pointer;
+    transform:color;
+    color: white;
+}
+main .about-me-button{
+    display: flex;
+    gap: 4rem;
+}
+main .about-me-button:hover{
+    display: flex;
+    gap: 4rem; 
+}
+main .about-me-button a{
+    color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.5s ;
+    
+    transition: color 0.5s ;
+   
+}
+main .about-me-button a:hover {
+    cursor: pointer;
+    transform:color;
+    color: white;
+    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+main .about-me-button a i{
+    color: rgba(255, 255, 255, 0.699);
+    padding-left: 1rem;
+    transition: color 0.5s ;
+    }
+    main .about-me-button i:hover {
+        cursor: pointer;
+        transform:color;
+        color: white;
+    }
+
+
+
+
+
+/*--------------------- jobs part -----------------------------*/
+.job-h2{
+    margin-top: 2rem;
+    font-size: 4rem;
+}
+.line-cut{
+    width: 90%;
+    height: 2px;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+   
+}
+.job {
+    width: 90%;
+    max-width: 400px;
+    min-height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.job .my-job{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 1rem;
+    transition: transform 0.2s ; 
+}
+.job .my-job:hover{
+    cursor: pointer;
+    transform: scale(1.1) ;
+}
+.job .my-job h2{
+    font-size: 2rem;
+}
+.job .my-job div{
+    width: 70%;
+    height: 70%;
+}
+.job .my-job div a img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+
+
+
+ /* about me contact  */
+.about-contact{
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+ #about-me-text,
+#contact{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 2rem;
+    transition: transform 0.2s ; 
+   }
+   .about-contact .about-me-text:hover{
+       cursor: pointer;
+       transform: scale(1.1) ;
+   }
+   #contact:target,
+   #about-me-text:target{
+    transform: scale(1.1);
+  } 
+
+
+/* ------------------------- */
+
+
+.about-contact .about-me-text h2,
+.about-contact .contact h2{
+    color:rgba(255, 255, 255, 0.699);
+    font-size: 2rem;
+    
+}
+
+.about-contact .about-me-text  h2 i,
+.about-contact .contact  h2 i{
+    font-size: 0.5rem;
+    color: aqua;
+}
+.about-contact .contact i{
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: aqua;
+}
+.about-contact .about-me-text p{
+    overflow: auto;
+    color:rgba(255, 255, 255, 0.699);
+    font-size: 2rem;
+}
+
+.about-contact .contact{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 2rem;
+    transition: transform 0.2s ; 
+   }
+   .about-contact .contact:hover{
+    transform: scale(1.1);
+   }
+.about-contact .contact a{
+    color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.5s ;
+    transition: color 0.5s ;
+   
+}
+.about-contact .contact a:hover {
+    cursor: pointer;
+    transform:color;
+    color: white;
+    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------about-html ----------------
+
+
+.about-html{
+    width: 100%;
+
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+.about-html .about-me-1{
+    width: 90%;
+    height: 100%;
+    background-color: #555a5f6b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color:#555a5f6b ;
+    border-radius: 3rem; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+}
+.about-html .about-me-1 h2{
+   margin-top: 3rem;
+    font-size: 2rem;
+    color:rgba(255, 255, 255, 0.699);
+}
+
+.about-html .about-me-1 i{
+    color: aqua;
+    font-size: 1rem;
+
+}
+.about-html .about-me-1 p{
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    overflow: auto;
+    color:rgba(255, 255, 255, 0.308);
+    
+}
+
+.span{
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .span:hover {
+    color: white;
+    transform: scale(1.01);
+    font-weight: bolder;
+    cursor: pointer;
+    line-height: 2;
+  }
+  */
+
+  
+
+
+
+
+
+
+
+
+
+/* ---------------------contact-html------------------------ 
+
+
+
+
+
+
+
+
+.contact-html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 6rem;
+    padding: 2rem;
+}
+.contact-html .contact-html-me{
+    width: 420px;
+    height: 360px;
+    background-color: #555a5f6b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color:#555a5f6b ;
+    border-radius: 3rem; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   
+}
+.contact-html .contact-html-me h2{
+    margin-top: 0.8rem;
+    color: white;
+    
+}
+.contact-html .contact-html-me h2 i{
+    color: aqua;
+    font-size: 0.5rem;
+}
+.contact-html .contact-html-me div h3{
+    color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.5s ;
+    
+    transition: color 0.5s ;
+}
+.contact-html .contact-html-me div h3:hover{
+    cursor: pointer;
+    transform:color;
+  
+    color: white;
+    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.contact-html .contact-html-me div h3 a{
+    color: white;
+}*/
+
+
+
+
+
+
+/* form */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+.form-order{
+    display: flex;
+    flex-direction: column;
+}
+.form-order label{
+    color: white;
+}
+.form-order input{
+    padding: 0.3rem;
+    border: none;
+    border-radius: 5px; 
+}
+.form-order textarea{
+    border-radius: 3px;
+    padding: 0.3rem;
+}
+.form button{
+    color: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.5s ;
+}
+.form button:hover{
+    cursor: pointer;
+    color: #292d32;
+    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+   
+
+/* --------------------footer--------------------- */
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    width: 80%;
+    background-color: rgba(240, 248, 255, 0.089);
+    margin: 1rem;
+    padding: 1rem;
+    color: #b9b4c0;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------mediaquery --------------*/
+
+
+  
+  @media (min-width: 375px) and (max-width: 767px) {
+    /* Styles for medium screens */
+
+
+/* contact-html */
+.span:hover{
+color: white;
+transform: scale(1);
+    font-weight: bold;
+    cursor: pointer;
+    line-height: none;
+
+}
+.about-html .about-me-1 p{
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    
+    
+}
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* header */
+   header h1{
+    font-size: 4rem;
+   }
+   header{
+    max-width: 800px;
+   }
+   header nav {
+   flex-direction: row;
+   }
+/* main part */
+
+main{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 800px;
+    gap: 2rem;
+    padding: 2rem;
+}
+main .profile-pic{
+    width: 40%;
+    
+}
+main .about-me{
+    width: 50%;
+    
+}
+
+/* job part */
+.job{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 4rem;
+}
+.job .my-job{
+    width: 40%;
+}
+
+/* about contact part */
+.about-contact{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 4rem;
+}
+
+/* contact-html */
+.span:hover{
+    color: white;
+    transform: scale(1);
+    font-weight: bold;
+    cursor: pointer;
+    line-height: none;
+    
+    }
+   
+    .about-html .about-me-1 p{
+        padding: 2rem 2rem;
+        font-size: 2rem;  
+    }
+   
+
+  }
+  
+  @media (min-width: 992px) {
+    /* Styles for extra large screens */
+
+body{
+    width: 80vw;
+    margin: auto;
+}
+    /* header*/
+header .logo{
+        display: block;
+    }
+header{
+        min-width: 100%;
+        margin-top: 4rem;
+        flex-direction: row;
+        justify-content: space-between; 
+        gap: 2rem;
+        padding: 0 2rem;
+    } 
+header nav {
+    max-width: 600px;
+        flex-direction: row;
+        }
+header .line1{
+        display: none;
+       }
+header h1{
+        width: 200px;
+       }
+    /* main part */
+
+main{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    min-width: 100%;
+    gap: 8rem;
+    padding: 2rem;
+}
+main .profile-pic{
+    width: 40%;
+}
+
+
+
+
+/* job part */
+.job{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100%;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+.job .my-job{
+    width: 40%;
+}
+
+/* about contact part */
+.about-contact{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    min-width: 100%;
+    gap: 5rem;
+    padding: 2rem;
+}
+.about-me-text{
+    max-width: 800px;
+  
+}
+.contact{
+    max-width: 400px;
+   
+}
+
+
+
+/* contact-html */
+.contact-html{
+    
+    flex-direction: row;
+}
+.contact-html-me:nth-child(2){
+    flex-grow: 2;
+    
+}
+.form-order input{
+width: 30vw;
+
+}
+.form-order textarea{
+    width: 30vw;
+    }
+
+
+  /* contact-html */
+.span:hover{
+    color: white;
+    transform: scale(1);
+    font-weight: bold;
+    cursor: pointer;
+    line-height: none;
+    
+    }
+   
+    .about-html .about-me-1 p{
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        
+        
+    }  
+   
+  }
+  
