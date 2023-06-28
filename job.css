@@ -1,0 +1,267 @@
+
+/* default values----------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+i{
+    color: aqua;
+}
+:root {
+    width: 100%;
+    height: 100vh;
+    --background: linear-gradient(#6a6e72c5, #000000);
+    --box-shadow: rgba(139, 133, 133, 0.25) 0px 54px 55px, rgba(150, 146, 146, 0.12) 0px -12px 30px, rgba(107, 99, 99, 0.12) 0px 4px 6px, rgba(97, 91, 91, 0.17) 0px 12px 13px, rgba(128, 122, 122, 0.09) 0px -3px 5px;
+}
+
+
+
+
+
+/* body general values------------------------------------ */
+body{
+     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    background-color: #18191b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* got to tpo button------------------------------------------- */
+
+.go-to-top{
+   background-color: #b9b4c09f;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   position: fixed;
+   z-index: 11;
+   bottom: 6rem;
+   right: 6rem;
+    display: flex;
+   justify-content: center;
+   align-items:center;  
+   transition:.6s ease all ; 
+}
+.go-to-top:hover{
+    cursor: pointer;
+    transform : scale(1.2);
+}
+
+
+
+
+
+/* header----------------------------------------------------------  */
+header{
+   width: 90%;
+   max-width: 400px;
+   height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+/* logo-------------- */
+header .line1{
+    margin-top: 1rem;
+    width: 30px;
+    border:2px solid white;
+}
+header .logo{
+    object-fit: cover;
+    min-width: 50px;
+    max-width: 100px;
+    min-height: 50px;
+    max-height: 100px;
+    border: 10px solid #555a5f6b;
+    border-radius: 50%;
+    border-bottom-color :rgb(152, 155, 162);
+    border-left-color :rgb(152, 155, 162);
+    /* box-shadow: 0 0 10px 5px #5d6066; */
+    box-shadow:var(--box-shadow);
+    display: none;
+    animation: rotate 7s infinite linear;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+/* name---------------- */
+header h1{
+    font-size: 4rem;
+    transition: transform 0.5s ;
+}
+header h1:hover {
+    cursor: pointer;
+    transform: scale(1.2) ;
+}
+header h1:active {
+    transform: scale(0.8) ;
+}
+header h1:hover{
+    color: aqua; 
+}
+header h1:hover .fa-circle{
+    color: white; 
+}
+
+/* nav-bar---------------- */
+
+header nav{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:#6a6e72c5 ; */
+    /* background-image: linear-gradient(#6a6e72c5, #000000); */
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    transition: transform 0.2s ; 
+}
+ header nav:hover{
+    transform: scale(1.1) ;
+} 
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+header nav ul li{
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li a i{
+    font-size: 3rem;
+    padding: 2rem;
+}
+header nav ul li a i:hover{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+header nav ul li a i:active{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+
+
+/* --------------------footer--------------------- */
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    width: 80%;
+    background-color: rgba(240, 248, 255, 0.089);
+    margin: 1rem;
+    padding: 1rem;
+    color: #b9b4c0;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------mediaquery --------------*/
+
+
+  
+  @media (min-width: 375px) and (max-width: 767px) {
+    
+
+
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* header */
+   header h1{
+    font-size: 4rem;
+   }
+   header{
+    max-width: 800px;
+   }
+   header nav {
+   flex-direction: row;
+   }
+
+  }
+  
+  @media (min-width: 992px) {
+    /* Styles for extra large screens */
+
+body{
+    width: 80vw;
+    margin: auto;
+}
+    /* header*/
+header .logo{
+        display: block;
+    }
+header{
+        min-width: 100%;
+        margin-top: 4rem;
+        flex-direction: row;
+        justify-content: space-between; 
+        gap: 2rem;
+        padding: 0 2rem;
+    } 
+header nav {
+    max-width: 600px;
+        flex-direction: row;
+        }
+header .line1{
+        display: none;
+       }
+header h1{
+        width: 200px;
+       }
+    /* main part */
+
+  }
+  
