@@ -394,7 +394,7 @@ main .about-me-button a i{
 .about-contact{
     width: 90%;
     max-width: 400px;
-    height: 100%;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
