@@ -502,33 +502,35 @@ main .about-me-button a i{
 
 
 
-/* ------------------about-html ----------------
+------------------about-html ----------------
 
 
-.about-html{
-    width: 100%;
-
-    margin: 1rem 1rem;
+/* .about-html{
+    width: 90%;
+    max-width: 400px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    align-items: center;
+    gap: 4rem;
 }
 
 
 .about-html .about-me-1{
-    width: 90%;
-    height: 100%;
-    background-color: #555a5f6b;
+    margin: 0;
+    width: 80%;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem 1rem;
-    background-color:#555a5f6b ;
-    border-radius: 3rem; 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    background-image: var(--background);
+    border-radius: 3rem;
+    box-shadow:var(--box-shadow);
+    padding: 2rem;
+    transition: transform 0.2s ; 
    
 }
 .about-html .about-me-1 h2{
@@ -561,8 +563,8 @@ main .about-me-button a i{
     font-weight: bolder;
     cursor: pointer;
     line-height: 2;
-  }
-  */
+  } */
+  
 
   
 
@@ -730,7 +732,7 @@ footer p{
 
 
 /* contact-html */
-.span:hover{
+/* .span:hover{
 color: white;
 transform: scale(1);
     font-weight: bold;
@@ -743,7 +745,7 @@ transform: scale(1);
     font-size: 1rem;
     
     
-}
+} */
   }
   
   @media (min-width: 768px) and (max-width: 991px) {
