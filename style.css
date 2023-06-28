@@ -67,7 +67,7 @@ body{
 header{
    width: 90%;
    max-width: 400px;
-   height: 800px;
+   height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -482,169 +482,6 @@ main .about-me-button a i{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-------------------about-html ----------------
-
-
-/* .about-html{
-    width: 90%;
-    max-width: 400px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-}
-
-
-.about-html .about-me-1{
-    margin: 0;
-    width: 80%;
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    background-image: var(--background);
-    border-radius: 3rem;
-    box-shadow:var(--box-shadow);
-    padding: 2rem;
-    transition: transform 0.2s ; 
-   
-}
-.about-html .about-me-1 h2{
-   margin-top: 3rem;
-    font-size: 2rem;
-    color:rgba(255, 255, 255, 0.699);
-}
-
-.about-html .about-me-1 i{
-    color: aqua;
-    font-size: 1rem;
-
-}
-.about-html .about-me-1 p{
-    padding: 1rem 1rem;
-    font-size: 1rem;
-    overflow: auto;
-    color:rgba(255, 255, 255, 0.308);
-    
-}
-
-.span{
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-  
-  .span:hover {
-    color: white;
-    transform: scale(1.01);
-    font-weight: bolder;
-    cursor: pointer;
-    line-height: 2;
-  } */
-  
-
-  
-
-
-
-
-
-
-
-
-
-/* ---------------------contact-html------------------------ 
-
-
-
-
-
-
-
-
-.contact-html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 6rem;
-    padding: 2rem;
-}
-.contact-html .contact-html-me{
-    width: 420px;
-    height: 360px;
-    background-color: #555a5f6b;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background-color:#555a5f6b ;
-    border-radius: 3rem; 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-   
-}
-.contact-html .contact-html-me h2{
-    margin-top: 0.8rem;
-    color: white;
-    
-}
-.contact-html .contact-html-me h2 i{
-    color: aqua;
-    font-size: 0.5rem;
-}
-.contact-html .contact-html-me div h3{
-    color: rgba(255, 255, 255, 0.699);
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin-bottom: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    transition: transform 0.5s ;
-    
-    transition: color 0.5s ;
-}
-.contact-html .contact-html-me div h3:hover{
-    cursor: pointer;
-    transform:color;
-  
-    color: white;
-    box-shadow: rgb(32, 41, 49) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-.contact-html .contact-html-me div h3 a{
-    color: white;
-}*/
-
-
-
-
-
-
 /* form */
 
 .form{
@@ -728,24 +565,7 @@ footer p{
 
   
   @media (min-width: 375px) and (max-width: 767px) {
-    /* Styles for medium screens */
-
-
-/* contact-html */
-/* .span:hover{
-color: white;
-transform: scale(1);
-    font-weight: bold;
-    cursor: pointer;
-    line-height: none;
-
-}
-.about-html .about-me-1 p{
-    padding: 2rem 2rem;
-    font-size: 1rem;
-    
-    
-} */
+ 
   }
   
   @media (min-width: 768px) and (max-width: 991px) {
