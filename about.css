@@ -297,7 +297,7 @@ header{
     } 
 header nav {
     max-width: 600px;
-    max-height: 200px;
+    max-height: 100px;
         flex-direction: row;
         }
 header .line1{
