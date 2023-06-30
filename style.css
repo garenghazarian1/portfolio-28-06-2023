@@ -111,13 +111,12 @@ header h1{
 header h1:hover {
     cursor: pointer;
     transform: scale(1.2) ;
+    color: aqua; 
 }
 header h1:active {
     transform: scale(0.8) ;
 }
-header h1:hover{
-    color: aqua; 
-}
+
 header h1:hover .fa-circle{
     color: white; 
 }
@@ -331,6 +330,16 @@ main .about-me-button a i{
 .job-h2{
     margin-top: 2rem;
     font-size: 4rem;
+    transition: transform 0.5s ;
+}
+
+.job-h2:hover {
+    cursor: pointer;
+    transform: scale(1.2) ;
+    color: aqua; 
+}
+.job-h2:active {
+    transform: scale(0.8) ;
 }
 .line-cut{
     width: 90%;
@@ -623,22 +632,9 @@ main .about-me{
     gap: 4rem;
 }
 
-/* contact-html */
-.span:hover{
-    color: white;
-    transform: scale(1);
-    font-weight: bold;
-    cursor: pointer;
-    line-height: none;
-    
-    }
-   
-    .about-html .about-me-1 p{
-        padding: 2rem 2rem;
-        font-size: 2rem;  
-    }
-   
 
+   
+   
   }
   
   @media (min-width: 992px) {
@@ -683,7 +679,13 @@ main .profile-pic{
     width: 40%;
 }
 
-
+.about-me div h2{
+   
+    transition: transform 1s ease-out;
+}
+.about-me div h2:hover{
+   transform:scale(1.05)
+}
 
 
 /* job part */
@@ -720,15 +722,7 @@ main .profile-pic{
 
 
 
-/* contact-html */
-.contact-html{
-    
-    flex-direction: row;
-}
-.contact-html-me:nth-child(2){
-    flex-grow: 2;
-    
-}
+
 .form-order input{
 width: 30vw;
 
@@ -738,22 +732,6 @@ width: 30vw;
     }
 
 
-  /* contact-html */
-.span:hover{
-    color: white;
-    transform: scale(1);
-    font-weight: bold;
-    cursor: pointer;
-    line-height: none;
-    
-    }
-   
-    .about-html .about-me-1 p{
-        padding: 2rem 2rem;
-        font-size: 2rem;
-        
-        
-    }  
-   
+ 
   }
   
